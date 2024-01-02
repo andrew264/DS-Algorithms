@@ -1,15 +1,5 @@
-class Node<T> {
-    public T value;
-    public Node<T> next;
-
-    public Node(T value) {
-        this.value = value;
-        this.next = null;
-    }
-
-}
-
 public class Queue<T> {
+
     public int size;
     private Node<T> head = null;
     private Node<T> tail = null;
@@ -58,6 +48,17 @@ public class Queue<T> {
             current = current.next;
         }
         System.out.println();
+    }
+
+    private static class Node<T> {
+        public T value;
+        public Node<T> next;
+
+        public Node(T value) {
+            this.value = value;
+            this.next = null;
+        }
+
     }
 
 }

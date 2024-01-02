@@ -6,7 +6,7 @@ public class TestQueue {
         queue.enqueue(3);
         System.out.println(queue.peek());  // 1
         queue.print();  // 1 2 3
-        queue.dequeue();
+        System.out.println(queue.dequeue()); // 1
         queue.enqueue(4);
         queue.print();  // 2 3 4
     }
