@@ -12,7 +12,7 @@ public class TwoCrystalBalls {
 
         i -= jumpAmt;  // we go back to a previously known good point
 
-        for (int j = 0; j < jumpAmt && i < breaks.length; i++, j++)  // we go through the array without jumping
+        for (int j = 0; j <= jumpAmt && i < breaks.length; j++, i++)  // we go through the array without jumping
             if (breaks[i]) return i;  // the point where the second ball breaks gives us the breaking point
         // i.e. linear search
 
