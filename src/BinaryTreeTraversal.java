@@ -1,8 +1,9 @@
 import java.util.ArrayList;
 
 public class BinaryTreeTraversal {
-    // Binary Tree Traversal
+    // Binary Tree Traversal (Depth-first search)
     // Given a binary tree, return the values of its nodes in pre-order, in-order, and post-order traversal.
+    // It preserves tree structure while traversing the tree.
     // Complexity: O(n) - n is the number of nodes in the tree
 
     static <T> ArrayList<T> preOrder(BinaryTreeNode<T> root, ArrayList<T> path) {
@@ -70,19 +71,11 @@ public class BinaryTreeTraversal {
         root.right.left = new BinaryTreeNode<>(6);
         root.right.right = new BinaryTreeNode<>(7);
 
+        System.out.println("Tree:" + "\n" + root);
+
         System.out.println("Pre-order traversal: " + preOrder(root, new ArrayList<>())); // [1, 2, 4, 5, 3, 6, 7]
         System.out.println("In-order traversal: " + inOrder(root, new ArrayList<>()));  // [4, 2, 5, 1, 6, 3, 7]
         System.out.println("Post-order traversal: " + postOrder(root, new ArrayList<>()));  // [4, 5, 2, 6, 7, 3, 1]
-    }
-
-    private static class BinaryTreeNode<T> {
-        final T data;
-        BinaryTreeNode<T> left;
-        BinaryTreeNode<T> right;
-
-        BinaryTreeNode(T data) {
-            this.data = data;
-        }
     }
 
 

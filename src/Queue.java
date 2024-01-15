@@ -41,6 +41,10 @@ public class Queue<T> {
         return this.head.value;
     }
 
+    public boolean isEmpty() {
+        return this.size == 0;
+    }
+
     public void print() {
         Node<T> current = this.head;
         while (current != null) {
