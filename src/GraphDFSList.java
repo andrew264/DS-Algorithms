@@ -48,14 +48,4 @@ public class GraphDFSList {
         System.out.println(path); // [0, 1, 4, 5, 6]
 
     }
-
-    private static class GraphEdge {
-        int to;
-        int weight;
-
-        public GraphEdge(int to, int weight) {
-            this.to = to;
-            this.weight = weight;
-        }
-    }
 }
