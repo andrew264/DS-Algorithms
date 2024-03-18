@@ -1,3 +1,5 @@
+package data_structures;
+
 public class Queue<T> {
 
     public int size;
@@ -9,7 +11,7 @@ public class Queue<T> {
     }
 
     public void enqueue(T value) {  // add a new node to the tail
-        Node<T> node = new Node<T>(value);  // create a new node
+        Node<T> node = new Node<>(value);  // create a new node
         this.size++;
         if (this.tail == null) {  // if the queue is empty, set the head and tail to the new node
             this.head = node;

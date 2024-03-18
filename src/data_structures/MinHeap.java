@@ -1,7 +1,9 @@
+package data_structures;
+
 import java.util.ArrayList;
 
 public class MinHeap<T extends Comparable<T>> {
-    // MinHeap is a complete binary tree
+    // data_structures.MinHeap is a complete binary tree
     // A binary tree where the value of each node is less than or equal to the value of its children
     // Also known as a priority queue
     // The root node is the minimum value in the tree
@@ -11,8 +13,8 @@ public class MinHeap<T extends Comparable<T>> {
     private final ArrayList<T> heap;
     public int length;
 
-    MinHeap() {
-        heap = new ArrayList<T>();
+    public MinHeap() {
+        heap = new ArrayList<>();
         length = 0;
 
     }
@@ -41,13 +43,13 @@ public class MinHeap<T extends Comparable<T>> {
         System.out.println("Length: " + heap.length);  // 0
     }
 
-    void insert(T value) {
+    public void insert(T value) {
         heap.add(value);  // add value to the end of the array
         heapifyUp(length);  // heapify up the tree from the end of the array
         length++;  // increment length
     }
 
-    T deleteMin() {
+    public T deleteMin() {
         if (length == 0) {
             return null;  // heap is empty
         }

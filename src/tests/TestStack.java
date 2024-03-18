@@ -1,3 +1,7 @@
+package tests;
+
+import data_structures.Stack;
+
 public class TestStack {
     public static void main(String[] args) {
         Stack<Integer> stack = new Stack<>();

@@ -1,3 +1,7 @@
+package search;
+
+import data_structures.BinaryTreeNode;
+
 public class BinarySearchTreeDFS {
     // Binary Search Tree Depth First Search
     // Nodes in the left subtree are less than or equal the root node

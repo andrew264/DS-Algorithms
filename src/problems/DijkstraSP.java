@@ -1,3 +1,7 @@
+package problems;
+
+import data_structures.GraphEdge;
+
 import java.util.*;
 
 public class DijkstraSP {

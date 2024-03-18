@@ -1,3 +1,7 @@
+package problems;
+
+import data_structures.BinaryTreeNode;
+
 public class BinaryTreeComparison {
     // Given two binary trees, return true if they are structurally identical.
     // Complexity: O(n) - n is the number of nodes in the tree

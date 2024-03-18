@@ -1,3 +1,5 @@
+package data_structures;
+
 public class Stack<T> {
     public int size;
     private Node<T> head;
@@ -9,7 +11,7 @@ public class Stack<T> {
     }
 
     public void push(T value) {
-        Node<T> node = new Node<T>(value);
+        Node<T> node = new Node<>(value);
         this.size++;
         if (this.head == null) {  // if the stack is empty, set the head to the new node
             this.head = node;

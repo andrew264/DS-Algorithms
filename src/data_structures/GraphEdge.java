@@ -1,6 +1,8 @@
+package data_structures;
+
 public class GraphEdge {
-    int to;
-    int weight;
+    public int to;
+    public int weight;
 
     public GraphEdge(int to, int weight) {
         this.to = to;

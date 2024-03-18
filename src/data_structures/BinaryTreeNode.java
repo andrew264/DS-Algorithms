@@ -1,15 +1,19 @@
-public class BinaryTreeNode<T> {
-    final T data;
-    BinaryTreeNode<T> left;
-    BinaryTreeNode<T> right;
+package data_structures;
 
-    BinaryTreeNode(T data) {
+public class BinaryTreeNode<T> {
+    public final T data;
+    public BinaryTreeNode<T> left;
+    public BinaryTreeNode<T> right;
+
+    public BinaryTreeNode(T data) {
         this.data = data;
     }
-    boolean isLeaf() {
+
+    public boolean isLeaf() {
         return left == null && right == null;
     }
-    boolean equals(BinaryTreeNode<T> other) {
+
+    public boolean equals(BinaryTreeNode<T> other) {
         return data.equals(other.data);
     }
 

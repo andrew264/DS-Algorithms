@@ -1,3 +1,7 @@
+package tests;
+
+import data_structures.LinkedList;
+
 public class TestLinkedList {
     public static void main(String[] args) {
         LinkedList<Integer> list = new LinkedList<>();

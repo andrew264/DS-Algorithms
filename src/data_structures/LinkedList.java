@@ -1,15 +1,17 @@
+package data_structures;
+
 public class LinkedList<T> {
     public int length;
     private Node<T> head;
     private Node<T> tail;
 
-    LinkedList() {
+    public LinkedList() {
         this.head = null;
         this.tail = null;
         this.length = 0;
     }
 
-    void insertAt(T item, int index) throws ArrayIndexOutOfBoundsException {
+    public void insertAt(T item, int index) throws ArrayIndexOutOfBoundsException {
         if (index > this.length) {
             throw new ArrayIndexOutOfBoundsException("oh no pls don't do that");  // we do not hae this index
         }
@@ -33,7 +35,7 @@ public class LinkedList<T> {
         this.length++;
     }
 
-    T remove(T item) {
+    public T remove(T item) {
         var curr = this.head;
         for (int i = 0; i < this.length; i++) {
             if (curr.data == item) {  // we found the item
@@ -48,7 +50,7 @@ public class LinkedList<T> {
 
     }
 
-    T removeAt(int index) {
+    public T removeAt(int index) {
         Node<T> node = this.getAt(index);
         if (node == null)  // we did find anything at the index
             return null;
@@ -84,7 +86,7 @@ public class LinkedList<T> {
         return node.data;
     }
 
-    void append(T item) {
+    public void append(T item) {
         // add to the end of the list
         Node<T> node = new Node<>(item);
         this.length++;
@@ -98,7 +100,7 @@ public class LinkedList<T> {
         this.tail = node;  // set the tail to the new node
     }
 
-    void prepend(T item) {
+    public void prepend(T item) {
         // add to the beginning of the list
         Node<T> node = new Node<>(item);
         this.length++;
@@ -112,7 +114,7 @@ public class LinkedList<T> {
         this.head = node;  // set the head to the new node
     }
 
-    T get(int index) {
+    public T get(int index) {
         return this.getAt(index).data;
     }
 

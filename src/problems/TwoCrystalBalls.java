@@ -1,3 +1,5 @@
+package problems;
+
 public class TwoCrystalBalls {
     // we have two balls to drop (。_。)
     // we need to find the exact breaking point before we run out of balls to break

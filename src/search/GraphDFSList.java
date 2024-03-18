@@ -1,3 +1,7 @@
+package search;
+
+import data_structures.GraphEdge;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 
