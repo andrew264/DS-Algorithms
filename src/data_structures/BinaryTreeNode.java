@@ -1,7 +1,7 @@
 package data_structures;
 
 public class BinaryTreeNode<T> {
-    public final T data;
+    public T data;
     public BinaryTreeNode<T> left;
     public BinaryTreeNode<T> right;
 
