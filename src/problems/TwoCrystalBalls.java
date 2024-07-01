@@ -6,8 +6,7 @@ public class TwoCrystalBalls {
     // Complexity: O(sqrt(N))
 
     static int breakPoint(boolean[] breaks) {
-        int jumpAmt = (int) Math.floor(Math.sqrt(breaks.length));  // find the jump amount with is sqrt(N)
-        // Math.floor because sqrt(3) is funny so round off to the lowest
+        int jumpAmt = (int) Math.sqrt(breaks.length);  // find the jump amount with is sqrt(N)
 
         int i = jumpAmt;  // we start from the jump amount
         for (; i < breaks.length; i += jumpAmt) if (breaks[i]) break;  // we find where the first ball breaks
