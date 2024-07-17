@@ -13,11 +13,15 @@ public class BubbleSort {
             for (int j = 0; j < arr.length - 1 - i; j++)
                 // -1 cuz we don't want the last element, as we compare with a [j+1]
                 // -i cuz in bubble sort after every iteration the last i elements in the array is sorted.
-                if (arr[j] > arr[j + 1]) {  // if the current element is greater than the next element swap them
-                    int temp = arr[j];
-                    arr[j] = arr[j + 1];
-                    arr[j + 1] = temp;
-                }
+                if (arr[j] > arr[j + 1])  // if the current element is greater than the next element swap them
+                    swap(arr, j, j + 1);
+    }
+
+    private static void swap(int[] arr, int i, int j) {
+        // swap the elements at index i and j
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
     }
 
     public static void main(String[] args) {
