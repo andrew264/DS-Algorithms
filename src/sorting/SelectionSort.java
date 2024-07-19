@@ -13,17 +13,23 @@ public class SelectionSort {
                 if (arr[j] < arr[minIdx])
                     minIdx = j;
 
-            int minVal = arr[minIdx];
             if (stable) {  // shift the elements to the right
+                int temp = arr[minIdx];
                 while (minIdx > i) {
                     arr[minIdx] = arr[minIdx - 1];
                     minIdx--;
                 }
+                arr[i] = temp;
             } else {  // swap the minimum element with the current element
-                arr[minIdx] = arr[i];
+                swap(arr, i, minIdx);
             }
-            arr[i] = minVal;  // insert the minimum element at the correct position
         }
+    }
+
+    private static void swap(int[] arr, int i, int j) {
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
     }
 
     static void selectionSort(int[] arr) {
