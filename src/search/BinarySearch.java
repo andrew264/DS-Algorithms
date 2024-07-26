@@ -5,19 +5,19 @@ import java.util.Scanner;
 
 public class BinarySearch {
     // Complexity: O(log N)
-    static boolean binSearch(int[] arr, int target) {
-        int low = 0;
-        int high = arr.length;
+    static int binSearch(int[] arr, int target) {
+        int left = 0;
+        int right = arr.length - 1;
 
-        while (low < high) {
-            int mid = low + (high - low) / 2;  // find the middle index of the array
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
 
-            if (arr[mid] == target) return true;  // we found the target
-            else if (arr[mid] > target) high = mid;  // target is in left half
-            else low = mid + 1;  // target is in right half
+            if (arr[mid] == target) return mid;
+            else if (arr[mid] < target) left = mid + 1;
+            else right = mid - 1;
         }
 
-        return false;  // target is not found
+        return -1;
     }
 
     public static void main(String[] args) {
@@ -26,10 +26,10 @@ public class BinarySearch {
         System.out.println("Array: " + Arrays.toString(anArray));
         System.out.print("Enter a num: ");
         int t = sc.nextInt();
-        boolean isFound = binSearch(anArray, t);
+        int index = binSearch(anArray, t);
 
-        if (isFound) System.out.printf("%d is in Array", t);
-        else System.out.printf("%d is not in Array", t);
+        if (index != -1) System.out.println("Found at index: " + index);
+        else System.out.println("Not found!");
 
     }
 }
