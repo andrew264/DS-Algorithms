@@ -14,13 +14,13 @@ public class TestLinkedList {
         list.insertAt(4, 2);
         list.insertAt(1, 0);
         System.out.println(list);  // [1, 3, 7, 4, 5, 9]
-        var removed = list.remove(7);
+        int removed = list.remove(7);
         System.out.println("Removed: " + removed);  // 7
         System.out.println(list);  // [1, 3, 4, 5, 9]
-        var removed2 = list.removeAt(2);
+        int removed2 = list.removeAt(2);
         System.out.println("Removed: " + removed2);  // 4
         System.out.println(list);  // [1, 3, 5, 9]
-        var getElement = list.get(2);
+        int getElement = list.get(2);
         System.out.println("Get: " + getElement);  // 5
     }
 }

@@ -30,6 +30,7 @@ public class PrimeGenerator {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter a number: ");
         int n = sc.nextInt();
+        sc.close();
         int[] primes = genPrime(n);
         System.out.println("First " + n + " prime numbers: " + Arrays.toString(primes));
     }

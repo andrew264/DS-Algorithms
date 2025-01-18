@@ -20,6 +20,7 @@ public class LinearSearch {
         System.out.println("Array: " + Arrays.toString(anArray));
         System.out.print("Enter a num: ");
         int t = sc.nextInt();
+        sc.close();
         boolean isFound = linearSearch(anArray, t);
         if (isFound) System.out.printf("%d is in Array", t);
         else System.out.printf("%d is not in Array", t);

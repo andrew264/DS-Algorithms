@@ -36,7 +36,7 @@ public class LinkedList<T> {
     }
 
     public T remove(T item) {
-        var curr = this.head;
+        Node<T> curr = this.head;
         for (int i = 0; i < this.length; i++) {
             if (curr.data == item) {  // we found the item
                 break;

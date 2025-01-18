@@ -26,6 +26,7 @@ public class BinarySearch {
         System.out.println("Array: " + Arrays.toString(anArray));
         System.out.print("Enter a num: ");
         int t = sc.nextInt();
+        sc.close();
         int index = binSearch(anArray, t);
 
         if (index != -1) System.out.println("Found at index: " + index);
