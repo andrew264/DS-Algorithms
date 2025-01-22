@@ -1,4 +1,4 @@
-package problems;
+package problems.strings;
 
 import java.util.*;
 

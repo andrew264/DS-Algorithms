@@ -1,4 +1,4 @@
-package problems.beginner;
+package problems.arrays;
 
 public class RunningSum1D {
     public static int[] runningSum(int[] nums) {

@@ -1,4 +1,4 @@
-package problems.beginner;
+package problems.arrays;
 
 import java.util.ArrayList;
 
@@ -20,12 +20,12 @@ public class StudentsUnableToEat {
         }
         int i = 0;
         while (i < studentList.size()) {
-            if (studentList.get(0).equals(sandwichList.get(0))) {
-                studentList.remove(0);
-                sandwichList.remove(0);
+            if (studentList.getFirst().equals(sandwichList.getFirst())) {
+                studentList.removeFirst();
+                sandwichList.removeFirst();
                 i = 0;
             } else {
-                studentList.add(studentList.remove(0));
+                studentList.add(studentList.removeFirst());
                 i++;
             }
         }

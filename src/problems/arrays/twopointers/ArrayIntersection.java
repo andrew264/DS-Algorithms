@@ -1,4 +1,4 @@
-package problems.beginner;
+package problems.arrays.twopointers;
 
 import java.util.Arrays;
 import java.util.HashSet;

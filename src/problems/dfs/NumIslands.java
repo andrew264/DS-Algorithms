@@ -1,4 +1,4 @@
-package problems;
+package problems.dfs;
 
 public class NumIslands {
     // Number of islands problem

@@ -1,4 +1,4 @@
-package problems.beginner;
+package problems.strings;
 
 import java.util.HashMap;
 
