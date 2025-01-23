@@ -1,4 +1,4 @@
-package problems.mid;
+package problems.arrays.twopointers;
 
 public class FindDuplicate {
     public static int findDuplicate(int[] nums) {

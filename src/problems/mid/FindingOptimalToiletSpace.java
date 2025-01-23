@@ -15,14 +15,14 @@ public class FindingOptimalToiletSpace {
         while (left < right) {  // ah, shit; here we go again
             int mid = right - (right - left) / 2;
             if (check(position, mid) >= m)
-                left=mid;
+                left = mid;
             else
-                right=mid-1;
+                right = mid - 1;
         }
         return left;
     }
 
-    private static int check(int[] position, int mid){
+    private static int check(int[] position, int mid) {
         int count = 0;
         int prev = -mid;  // set the previous toilet to negative mid to make sure the first toilet is included
         for (int i : position) {  // for each toilet

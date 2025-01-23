@@ -3,19 +3,7 @@ package problems.mid;
 import data_structures.BinaryTreeNode;
 
 public class BSTreeToGreaterSumTree {
-    int prev=0;
-    public BinaryTreeNode<Integer> bstToGst(BinaryTreeNode<Integer> root) {
-        // similar to inOrder traversal but in reverse (i.e. right and then left)
-        if (root == null)
-            return null;
-        if (root.right != null)
-            bstToGst(root.right);
-        root.data = root.data + prev;
-        prev = root.data;
-        if (root.left!= null)
-            bstToGst(root.left);
-        return root;
-    }
+    int prev = 0;
 
     public static void main(String[] args) {
         // root = [4,1,6,0,2,5,7,null,null,null,3,null,null,null,8]
@@ -32,5 +20,18 @@ public class BSTreeToGreaterSumTree {
 
         BSTreeToGreaterSumTree bst = new BSTreeToGreaterSumTree();
         System.out.println(bst.bstToGst(root));  // [30,36,21,36,35,26,15,null,null,null,33,null,null,null,8]
+    }
+
+    public BinaryTreeNode<Integer> bstToGst(BinaryTreeNode<Integer> root) {
+        // similar to inOrder traversal but in reverse (i.e. right and then left)
+        if (root == null)
+            return null;
+        if (root.right != null)
+            bstToGst(root.right);
+        root.data = root.data + prev;
+        prev = root.data;
+        if (root.left != null)
+            bstToGst(root.left);
+        return root;
     }
 }
