@@ -4,11 +4,12 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class ArrayLeader {
+    // An element is a Leader if it is greater than or equal to all the elements to its right side.
     public static ArrayList<Integer> findSolution(int[] arr) {
         ArrayList<Integer> result = new ArrayList<>();
         int max = arr[arr.length - 1];
         result.add(max);
-        for (int i = arr.length - 2; i > -1; i--) {  // suffix sum??
+        for (int i = arr.length - 2; i > -1; i--) {  // suffix maximum??
             if (arr[i] >= max) {
                 result.add(arr[i]);
                 max = arr[i];
